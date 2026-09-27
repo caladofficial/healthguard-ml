@@ -26,8 +26,12 @@ __pycache__/
 data/pipeline/*.parquet
 data/pipeline/emb_*.npy
 
-# Raw source downloads - re-fetched by pipeline/01_collect.py, provenance and
-# content hashes recorded in reports/pipeline/01_collection.json
+# Raw source downloads (19.5 MB, uci_296.csv is the bulk).
+# NOTE: pipeline/01_collect.py reads these from disk (pipeline/01_collect.py:143-146);
+# it does NOT re-download them. To restore, fetch from the UCI flat CSV endpoint:
+#     curl -o data/uci_296.csv https://archive.ics.uci.edu/static/public/296/data.csv
+# Provenance, licences and content hashes are recorded in
+# reports/pipeline/01_collection.json, which IS tracked.
 data/*.csv
 
 # ---------------------------------------------------------------------------
