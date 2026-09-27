@@ -1,0 +1,24 @@
+{
+  "roc_auc_ovr": 0.9977,
+  "log_loss": 0.0592,
+  "model": "moe_declustered",
+  "holdout": "426 rows",
+  "n_classes": 3,
+  "candidate_scores": {
+    "stack_group": 0.9977,
+    "soft_vote_group": 0.9974,
+    "xgb_tuned": 0.9977,
+    "moe_declustered": 0.9977
+  },
+  "xgb_search_params": {
+    "subsample": 0.9,
+    "reg_lambda": 1.5,
+    "n_estimators": 700,
+    "min_child_weight": 1,
+    "max_depth": 5,
+    "learning_rate": 0.02,
+    "colsample_bytree": 0.7
+  },
+  "baseline_prevalence": 0.3043,
+  "train_seconds": 96.9
+}

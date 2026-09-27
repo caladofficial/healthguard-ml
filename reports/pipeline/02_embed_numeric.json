@@ -1,0 +1,9 @@
+{
+  "method": "numeric",
+  "rows": 301317,
+  "dim": 32,
+  "seconds": 2.2,
+  "rows_per_second": 138368.6,
+  "array_mb": 38.6,
+  "explained_variance": 0.9189647436141968
+}

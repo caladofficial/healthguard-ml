@@ -1,0 +1,42 @@
+# Secrets / environment
+.env
+.env.local
+*.pem
+
+# Python noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Regenerable pipeline artefacts (about 79 MB) - deliberately NOT in git.
+#
+# Everything below is recreated deterministically by:
+#     bash restore_pipeline.sh        # deps + stage 01 -> 03
+# or by re-running the relevant stage, e.g.
+#     python3 -u pipeline/01_collect.py
+#     python3 -u pipeline/02_embed.py --method numeric
+#     python3 -u pipeline/03_dedup_cluster.py --method numeric --algo kmeans \
+#             --clusters 4000 --cap 50
+#
+# Keeping them out of git means the repo stays reviewable and cloneable; the
+# numbers they produce are permanently recorded in reports/pipeline/*.json and
+# in PIPELINE_REPORT.md, which ARE tracked.
+# ---------------------------------------------------------------------------
+data/pipeline/*.parquet
+data/pipeline/emb_*.npy
+
+# Raw source downloads - re-fetched by pipeline/01_collect.py, provenance and
+# content hashes recorded in reports/pipeline/01_collection.json
+data/*.csv
+
+# ---------------------------------------------------------------------------
+# Large binary backup - NOT regenerable, keep it local.
+#
+# This tarball is the ONLY local copy of the 14 deck checkpoints the live site
+# loads (cad, diabetes, fetal_risk, hf_mortality, liver, maternal_risk, sepsis,
+# web_lgbm, web_xgb, ...). It is 35.8 MB, so it is not committed, but do not
+# delete it. Restore with:
+#     tar -xzf models/deck_checkpoints_archive.tar.gz -C models/
+# ---------------------------------------------------------------------------
+models/deck_checkpoints_archive.tar.gz

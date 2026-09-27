@@ -1,0 +1,104 @@
+{
+  "stage": "09_site_holdout",
+  "question": "cost of deploying to a data source the model has never seen",
+  "sites": [
+    "synth_site_a",
+    "synth_site_b",
+    "synth_site_c"
+  ],
+  "per_site": {
+    "synth_site_a": {
+      "test_rows": 6145,
+      "train_rows_unseen": 98538,
+      "unseen_site": {
+        "macro_f1": 0.928,
+        "accuracy": 0.9388,
+        "T0_any_down": 0.1051,
+        "T0_deep_to_T2plus": 0.0039,
+        "over_triage": 0.0
+      },
+      "seen_site": {
+        "macro_f1": 0.9259,
+        "accuracy": 0.9367,
+        "T0_any_down": 0.1038,
+        "T0_deep_to_T2plus": 0.0052,
+        "over_triage": 0.0006
+      },
+      "delta": {
+        "macro_f1": 0.0021,
+        "accuracy": 0.0021,
+        "T0_any_down": 0.0013,
+        "T0_deep_to_T2plus": -0.0013,
+        "over_triage": -0.0006
+      },
+      "fit_seconds": {
+        "unseen": 10.6,
+        "seen": 13.9
+      }
+    },
+    "synth_site_b": {
+      "test_rows": 6118,
+      "train_rows_unseen": 98394,
+      "unseen_site": {
+        "macro_f1": 0.923,
+        "accuracy": 0.9335,
+        "T0_any_down": 0.1227,
+        "T0_deep_to_T2plus": 0.0056,
+        "over_triage": 0.0
+      },
+      "seen_site": {
+        "macro_f1": 0.923,
+        "accuracy": 0.9331,
+        "T0_any_down": 0.1088,
+        "T0_deep_to_T2plus": 0.0042,
+        "over_triage": 0.0013
+      },
+      "delta": {
+        "macro_f1": 0.0,
+        "accuracy": 0.0004,
+        "T0_any_down": 0.0139,
+        "T0_deep_to_T2plus": 0.0014,
+        "over_triage": -0.0013
+      },
+      "fit_seconds": {
+        "unseen": 10.2,
+        "seen": 14.2
+      }
+    },
+    "synth_site_c": {
+      "test_rows": 6219,
+      "train_rows_unseen": 98572,
+      "unseen_site": {
+        "macro_f1": 0.9258,
+        "accuracy": 0.9376,
+        "T0_any_down": 0.0997,
+        "T0_deep_to_T2plus": 0.0069,
+        "over_triage": 0.0006
+      },
+      "seen_site": {
+        "macro_f1": 0.9246,
+        "accuracy": 0.9371,
+        "T0_any_down": 0.0997,
+        "T0_deep_to_T2plus": 0.0083,
+        "over_triage": 0.0006
+      },
+      "delta": {
+        "macro_f1": 0.0012,
+        "accuracy": 0.0005,
+        "T0_any_down": 0.0,
+        "T0_deep_to_T2plus": -0.0014,
+        "over_triage": 0.0
+      },
+      "fit_seconds": {
+        "unseen": 9.8,
+        "seen": 14.3
+      }
+    }
+  },
+  "mean_macro_f1_unseen": 0.9256,
+  "mean_macro_f1_seen": 0.9245,
+  "mean_T0_down_unseen": 0.1092,
+  "mean_T0_down_seen": 0.1041,
+  "generalisation_gap_macro_f1": -0.0011,
+  "generalisation_gap_T0_down": 0.0051
+}

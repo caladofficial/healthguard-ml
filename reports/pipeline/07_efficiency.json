@@ -1,0 +1,50 @@
+{
+  "stage": "07_efficiency",
+  "method": "distillation + tree-count reduction + compressed storage",
+  "why_not_int8": "int8/int4 weight quantisation applies to neural nets; a tree ensemble stores leaf values and thresholds, so the equivalent levers are student distillation, fewer trees and compressed storage",
+  "before": {
+    "name": "teacher_400trees_31leaves",
+    "size_mb": 2.9,
+    "latency_ms_p50": 1.298,
+    "latency_ms_p95": 2.03,
+    "throughput_rows_per_s": 13007.9,
+    "macro_f1": 0.9236,
+    "T0_any_down": 0.1048
+  },
+  "after_student_hard_labels": {
+    "name": "student_60trees_15leaves_hard",
+    "size_mb": 0.21,
+    "latency_ms_p50": 1.232,
+    "latency_ms_p95": 1.789,
+    "throughput_rows_per_s": 171367.7,
+    "macro_f1": 0.9209,
+    "T0_any_down": 0.1139
+  },
+  "after_student_distilled": {
+    "name": "student_60trees_15leaves_distilled",
+    "size_mb": 0.21,
+    "latency_ms_p50": 1.146,
+    "latency_ms_p95": 1.829,
+    "throughput_rows_per_s": 186461.7,
+    "macro_f1": 0.9212,
+    "T0_any_down": 0.1112
+  },
+  "speedup_latency_p50": 1.13,
+  "speedup_throughput": 14.33,
+  "size_reduction_pct": 92.8,
+  "macro_f1_delta": -0.0024,
+  "student_teacher_agreement": 0.9943,
+  "storage_quantisation": {
+    "float64_compressed3_mb": 2.9,
+    "compressed9_mb": 2.72,
+    "note": "joblib compression is the float32-equivalent store for a tree ensemble; leaf values are already small floats"
+  },
+  "compute_cost": {
+    "teacher_softlabel_pass_cpu_s": 22.9,
+    "student_hard_cpu_s": 6.5,
+    "student_distilled_cpu_s": 6.0,
+    "total_cpu_seconds": 35.5,
+    "rate_usd_per_vcpu_hour": 0.0425,
+    "total_usd": 0.00042
+  }
+}

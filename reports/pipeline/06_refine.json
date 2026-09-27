@@ -1,0 +1,130 @@
+{
+  "stage": "06_refine",
+  "base_model": "lgbm_curated",
+  "errors": 1226,
+  "error_rate": 0.0661,
+  "weak_spot_clusters": [
+    {
+      "error_cluster": 3,
+      "errors": 126,
+      "dominant": "T0->T1",
+      "dominant_n": 32,
+      "share_of_cluster": 0.254,
+      "share_of_all_errors": 0.103
+    },
+    {
+      "error_cluster": 16,
+      "errors": 77,
+      "dominant": "T4->T3",
+      "dominant_n": 27,
+      "share_of_cluster": 0.351,
+      "share_of_all_errors": 0.063
+    },
+    {
+      "error_cluster": 19,
+      "errors": 73,
+      "dominant": "T2->T3",
+      "dominant_n": 27,
+      "share_of_cluster": 0.37,
+      "share_of_all_errors": 0.06
+    },
+    {
+      "error_cluster": 6,
+      "errors": 69,
+      "dominant": "T0->T1",
+      "dominant_n": 25,
+      "share_of_cluster": 0.362,
+      "share_of_all_errors": 0.056
+    },
+    {
+      "error_cluster": 8,
+      "errors": 65,
+      "dominant": "T2->T1",
+      "dominant_n": 21,
+      "share_of_cluster": 0.323,
+      "share_of_all_errors": 0.053
+    },
+    {
+      "error_cluster": 23,
+      "errors": 65,
+      "dominant": "T2->T3",
+      "dominant_n": 26,
+      "share_of_cluster": 0.4,
+      "share_of_all_errors": 0.053
+    },
+    {
+      "error_cluster": 12,
+      "errors": 58,
+      "dominant": "T0->T1",
+      "dominant_n": 19,
+      "share_of_cluster": 0.328,
+      "share_of_all_errors": 0.047
+    },
+    {
+      "error_cluster": 2,
+      "errors": 57,
+      "dominant": "T2->T4",
+      "dominant_n": 13,
+      "share_of_cluster": 0.228,
+      "share_of_all_errors": 0.046
+    },
+    {
+      "error_cluster": 9,
+      "errors": 56,
+      "dominant": "T3->T2",
+      "dominant_n": 9,
+      "share_of_cluster": 0.161,
+      "share_of_all_errors": 0.046
+    },
+    {
+      "error_cluster": 4,
+      "errors": 55,
+      "dominant": "T2->T3",
+      "dominant_n": 27,
+      "share_of_cluster": 0.491,
+      "share_of_all_errors": 0.045
+    }
+  ],
+  "targeted_clusters": 254,
+  "train_before": 148033,
+  "train_after": 165789,
+  "added_rows": 17756,
+  "raise_cap": 140,
+  "refit_seconds": 15.8,
+  "before": {
+    "macro_f1": 0.9221,
+    "T0_any_down": 0.1089,
+    "T2_recall": 0.8971,
+    "T4_recall": 0.8519,
+    "error_rate": 0.0661
+  },
+  "after": {
+    "macro_f1": 0.9217,
+    "T0_any_down": 0.1143,
+    "T2_recall": 0.8993,
+    "T4_recall": 0.8532,
+    "error_rate": 0.0666
+  },
+  "delta": {
+    "macro_f1": -0.0004,
+    "T0_any_down": 0.0054,
+    "T2_recall": 0.0022,
+    "T4_recall": 0.0013,
+    "error_rate": 0.0005
+  },
+  "contamination_check": {
+    "cluster_disjoint_test": {
+      "macro_f1": 0.9221,
+      "T0_any_down": 0.1089,
+      "T2_recall": 0.8971,
+      "T4_recall": 0.8519,
+      "error_rate": 0.0661
+    },
+    "random_test_same_clusters": {
+      "macro_f1": 0.9305,
+      "T0_any_down": 0.1006
+    },
+    "macro_f1_inflation": 0.0084,
+    "why": "random split leaves near-duplicates of training rows in test"
+  }
+}

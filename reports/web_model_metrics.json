@@ -1,0 +1,18 @@
+{
+  "macro_f1": 0.9129,
+  "per_class_recall": {
+    "0": 0.8932,
+    "1": 0.9544,
+    "2": 0.8778,
+    "3": 0.9473,
+    "4": 0.8775
+  },
+  "T0_any_down": 0.1068,
+  "T0_deep_to_T2plus": 0.0014,
+  "beyond_adjacent": 0.0134,
+  "over_triage": 0.0016,
+  "model": "blend_xgb_lgbm",
+  "n_rows": 200000,
+  "holdout": 20000,
+  "note": "web booster = bake-off winner (form features only) with identical rule+safety layer"
+}

@@ -1,0 +1,150 @@
+{
+  "results": {
+    "xgboost": {
+      "metrics": {
+        "macro_f1": 0.9124,
+        "per_class_recall": {
+          "0": 0.8932,
+          "1": 0.9545,
+          "2": 0.8736,
+          "3": 0.949,
+          "4": 0.8793
+        },
+        "T0_any_down": 0.1068,
+        "T0_deep_to_T2plus": 0.0018,
+        "beyond_adjacent": 0.0135,
+        "over_triage": 0.0012,
+        "review_rate": 0.0052
+      },
+      "feasible": true
+    },
+    "lightgbm": {
+      "metrics": {
+        "macro_f1": 0.9127,
+        "per_class_recall": {
+          "0": 0.8954,
+          "1": 0.9541,
+          "2": 0.8791,
+          "3": 0.9464,
+          "4": 0.8748
+        },
+        "T0_any_down": 0.1046,
+        "T0_deep_to_T2plus": 0.0014,
+        "beyond_adjacent": 0.0136,
+        "over_triage": 0.0019,
+        "review_rate": 0.0054
+      },
+      "feasible": true
+    },
+    "extratrees": {
+      "metrics": {
+        "macro_f1": 0.8457,
+        "per_class_recall": {
+          "0": 0.8922,
+          "1": 0.9538,
+          "2": 0.6681,
+          "3": 0.8733,
+          "4": 0.7811
+        },
+        "T0_any_down": 0.1078,
+        "T0_deep_to_T2plus": 0.0018,
+        "beyond_adjacent": 0.0121,
+        "over_triage": 0.036,
+        "review_rate": 0.0013
+      },
+      "feasible": true
+    },
+    "randomforest": {
+      "metrics": {
+        "macro_f1": 0.9061,
+        "per_class_recall": {
+          "0": 0.8932,
+          "1": 0.9538,
+          "2": 0.8595,
+          "3": 0.942,
+          "4": 0.864
+        },
+        "T0_any_down": 0.1068,
+        "T0_deep_to_T2plus": 0.0009,
+        "beyond_adjacent": 0.0131,
+        "over_triage": 0.0026,
+        "review_rate": 0.0044
+      },
+      "feasible": true
+    },
+    "mlp_sklearn": {
+      "metrics": {
+        "macro_f1": 0.9,
+        "per_class_recall": {
+          "0": 0.8932,
+          "1": 0.9471,
+          "2": 0.8552,
+          "3": 0.9385,
+          "4": 0.8486
+        },
+        "T0_any_down": 0.1068,
+        "T0_deep_to_T2plus": 0.0041,
+        "beyond_adjacent": 0.0144,
+        "over_triage": 0.0021,
+        "review_rate": 0.0053
+      },
+      "feasible": false
+    },
+    "mlp_tensorflow": {
+      "metrics": {
+        "macro_f1": 0.9012,
+        "per_class_recall": {
+          "0": 0.8973,
+          "1": 0.9438,
+          "2": 0.8654,
+          "3": 0.9273,
+          "4": 0.8784
+        },
+        "T0_any_down": 0.1027,
+        "T0_deep_to_T2plus": 0.0023,
+        "beyond_adjacent": 0.0139,
+        "over_triage": 0.003,
+        "review_rate": 0.0051
+      },
+      "feasible": true
+    },
+    "blend_xgb_lgbm": {
+      "metrics": {
+        "macro_f1": 0.9129,
+        "per_class_recall": {
+          "0": 0.8932,
+          "1": 0.9544,
+          "2": 0.8778,
+          "3": 0.9473,
+          "4": 0.8775
+        },
+        "T0_any_down": 0.1068,
+        "T0_deep_to_T2plus": 0.0014,
+        "beyond_adjacent": 0.0134,
+        "over_triage": 0.0016,
+        "review_rate": 0.0053
+      },
+      "feasible": true
+    },
+    "blend_xgb_lgbm_et": {
+      "metrics": {
+        "macro_f1": 0.9072,
+        "per_class_recall": {
+          "0": 0.8941,
+          "1": 0.9545,
+          "2": 0.8725,
+          "3": 0.9317,
+          "4": 0.8622
+        },
+        "T0_any_down": 0.1059,
+        "T0_deep_to_T2plus": 0.0009,
+        "beyond_adjacent": 0.013,
+        "over_triage": 0.0014,
+        "review_rate": 0.0047
+      },
+      "feasible": true
+    }
+  },
+  "winner": "blend_xgb_lgbm",
+  "parity": 1.5e-05
+}

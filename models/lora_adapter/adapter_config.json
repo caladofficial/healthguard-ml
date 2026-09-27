@@ -1,0 +1,14 @@
+{
+  "base": "/kaggle/input/datasets/jirandom/smollm2-135m-instruct",
+  "r": 16,
+  "alpha": 32,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "train_rows": 3000,
+  "epochs": 2,
+  "trainable_params": 1843200
+}

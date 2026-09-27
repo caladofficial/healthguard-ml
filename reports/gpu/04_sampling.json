@@ -1,0 +1,40 @@
+{
+  "stage": "04_sample",
+  "split_rule": "cluster-disjoint (whole clusters assigned to train/val/test)",
+  "clusters_total": 4000,
+  "clusters_train": 3200,
+  "clusters_val": 400,
+  "clusters_test": 400,
+  "train_curated_rows": 148952,
+  "train_raw_control_rows": 148952,
+  "val_rows": 18291,
+  "test_rows": 18415,
+  "external_real_rows": 1317,
+  "external_real_unique_patterns": 0,
+  "external_real_note": "harmonised real rows: ~90% features missing, so exact dedup collapsed them to 1 unique pattern -> excluded from training, kept only as an external rule-agreement slice",
+  "train_class_counts": {
+    "T0": 14087,
+    "T1": 54722,
+    "T2": 35937,
+    "T3": 35361,
+    "T4": 8845
+  },
+  "test_class_counts": {
+    "T0": 1902,
+    "T1": 6878,
+    "T2": 4364,
+    "T3": 4150,
+    "T4": 1121
+  },
+  "raw_control_class_counts": {
+    "T0": 16465,
+    "T1": 54577,
+    "T2": 35264,
+    "T3": 34272,
+    "T4": 8374
+  },
+  "max_rows_per_cluster_in_train": 50,
+  "raw_control_max_rows_per_cluster": 130,
+  "raw_control_distinct_clusters": 3191,
+  "note": "raw_control drawn from the SAME train clusters so only curation differs"
+}

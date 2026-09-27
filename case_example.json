@@ -1,0 +1,10 @@
+{
+  "age": 62, "sex": 1, "pregnancy": 0,
+  "hr": 128, "sbp": 88, "dbp": 54, "rr": 24, "temp_c": 38.9, "spo2": 91, "gcs": 13, "pain": 8,
+  "onset_hours": 4, "followup_flag": 0,
+  "p_dm": 0.55, "p_cad": 0.62, "p_stroke": 0.3, "p_sepsis": 0.6, "p_liver": 0.1, "p_maternal": 0.02,
+  "chest_pain": 1, "dyspnea": 1, "abd_pain": 0, "fever": 1, "cough": 0, "headache": 0,
+  "weakness": 1, "bleeding": 0, "vomiting": 0, "dizziness": 0, "syncope": 0, "seizure": 0,
+  "altered_mental": 0, "palpitations": 1, "jaundice": 0, "rash": 0,
+  "htn": 1, "dm": 1, "cad_hf": 1, "copd": 0, "ckd": 0, "cancer": 0, "stroke_hx": 0, "immuno": 0
+}

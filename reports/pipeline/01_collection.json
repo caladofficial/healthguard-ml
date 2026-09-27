@@ -1,0 +1,220 @@
+{
+  "stage": "01_collect",
+  "generated": "2026-09-27T17:52:45Z",
+  "raw_corpus_rows": 301317,
+  "target_raw": 300000,
+  "meets_target": true,
+  "rows_admitted_from_sources": 301317,
+  "rows_considered_total": 514858,
+  "sources_admitted": [
+    "synth_site_a",
+    "synth_site_b",
+    "synth_site_c",
+    "uci_863",
+    "uci_45"
+  ],
+  "sources_rejected": [
+    "uci_296",
+    "uci_519",
+    "uci_529",
+    "uci_571",
+    "uci_827"
+  ],
+  "sources_unavailable": [
+    "mimic_iv_ed",
+    "mimic_iv_ed_demo",
+    "nhamcs",
+    "kaggle"
+  ],
+  "class_counts": {
+    "T0": 33370,
+    "T1": 110950,
+    "T2": 71535,
+    "T3": 68488,
+    "T4": 16974
+  },
+  "label_source_counts": {
+    "protocol": 300000,
+    "rule_from_partial_vitals": 1317
+  },
+  "pii": "no direct identifiers ingested; no id/name/contact columns retained",
+  "provenance": [
+    {
+      "source_id": "synth_site_a",
+      "source_name": "HealthGuard synthetic ED cohort (site A)",
+      "source_url": "local:src/triage_synth.py",
+      "retrieval_date": "2026-09-27T17:52:36Z",
+      "license": "self-generated synthetic; no third-party rights",
+      "robots": "n/a (locally generated)",
+      "sha256": "fb5e2a3fe1d72af0a41798950210715e",
+      "rows_in": 100000,
+      "rows_admitted": 100000,
+      "status": "admitted",
+      "notes": "deterministic ESI/ATS-shaped protocol labelling, 5% borderline noise"
+    },
+    {
+      "source_id": "synth_site_b",
+      "source_name": "HealthGuard synthetic ED cohort (site B)",
+      "source_url": "local:src/triage_synth.py",
+      "retrieval_date": "2026-09-27T17:52:37Z",
+      "license": "self-generated synthetic; no third-party rights",
+      "robots": "n/a (locally generated)",
+      "sha256": "97db24a683fab291d7b613bcfd205848",
+      "rows_in": 100000,
+      "rows_admitted": 100000,
+      "status": "admitted",
+      "notes": "deterministic ESI/ATS-shaped protocol labelling, 5% borderline noise"
+    },
+    {
+      "source_id": "synth_site_c",
+      "source_name": "HealthGuard synthetic ED cohort (site C)",
+      "source_url": "local:src/triage_synth.py",
+      "retrieval_date": "2026-09-27T17:52:37Z",
+      "license": "self-generated synthetic; no third-party rights",
+      "robots": "n/a (locally generated)",
+      "sha256": "0b9c88cd5399e6e9bdbb506eaafd587c",
+      "rows_in": 100000,
+      "rows_admitted": 100000,
+      "status": "admitted",
+      "notes": "deterministic ESI/ATS-shaped protocol labelling, 5% borderline noise"
+    },
+    {
+      "source_id": "uci_863",
+      "source_name": "Maternal Health Risk (UCI 863)",
+      "source_url": "https://archive.ics.uci.edu/dataset/863/maternal+health+risk",
+      "retrieval_date": "2026-09-27T17:52:37Z",
+      "license": "CC BY 4.0",
+      "robots": "none_published (200 HTML page, no directives)",
+      "sha256": "a1f7025719f84715096e0d1f95ae2e56b57809b9b15449e1836c96a7d976ae9b",
+      "rows_in": 1014,
+      "rows_admitted": 1014,
+      "status": "admitted",
+      "notes": "harmonised 7/51 triage columns; rest missing by construction"
+    },
+    {
+      "source_id": "uci_45",
+      "source_name": "Heart Disease (UCI 45)",
+      "source_url": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+      "retrieval_date": "2026-09-27T17:52:38Z",
+      "license": "CC BY 4.0",
+      "robots": "none_published (200 HTML page, no directives)",
+      "sha256": "868cd646a53ffbc55611192bae7496911a163937c185710f6b8aa11549b88df1",
+      "rows_in": 303,
+      "rows_admitted": 303,
+      "status": "admitted",
+      "notes": "harmonised 4/51 triage columns; rest missing by construction"
+    },
+    {
+      "source_id": "uci_296",
+      "source_name": "Diabetes 130-US hospitals (UCI 296)",
+      "source_url": "https://archive.ics.uci.edu/dataset/296",
+      "retrieval_date": "2026-09-27T17:52:38Z",
+      "license": "n/a - not used",
+      "robots": "none_published (200 HTML page, no directives)",
+      "rows_in": 101766,
+      "rows_admitted": 0,
+      "status": "rejected",
+      "notes": "no vital signs - demographics/utilisation only, cannot populate triage schema"
+    },
+    {
+      "source_id": "uci_519",
+      "source_name": "Heart failure clinical records (UCI 519)",
+      "source_url": "https://archive.ics.uci.edu/dataset/519",
+      "retrieval_date": "2026-09-27T17:52:38Z",
+      "license": "n/a - not used",
+      "robots": "none_published (200 HTML page, no directives)",
+      "rows_in": 299,
+      "rows_admitted": 0,
+      "status": "rejected",
+      "notes": "no vital signs - labs + echocardiography only"
+    },
+    {
+      "source_id": "uci_529",
+      "source_name": "Diabetes symptoms (UCI 529)",
+      "source_url": "https://archive.ics.uci.edu/dataset/529",
+      "retrieval_date": "2026-09-27T17:52:38Z",
+      "license": "n/a - not used",
+      "robots": "none_published (200 HTML page, no directives)",
+      "rows_in": 520,
+      "rows_admitted": 0,
+      "status": "rejected",
+      "notes": "no vital signs - symptom questionnaire"
+    },
+    {
+      "source_id": "uci_571",
+      "source_name": "Hepatitis C (UCI 571)",
+      "source_url": "https://archive.ics.uci.edu/dataset/571",
+      "retrieval_date": "2026-09-27T17:52:38Z",
+      "license": "n/a - not used",
+      "robots": "none_published (200 HTML page, no directives)",
+      "rows_in": 615,
+      "rows_admitted": 0,
+      "status": "rejected",
+      "notes": "no vital signs - laboratory panel"
+    },
+    {
+      "source_id": "uci_827",
+      "source_name": "Sepsis survival minimal clinical records (UCI 827)",
+      "source_url": "https://archive.ics.uci.edu/dataset/827",
+      "retrieval_date": "2026-09-27T17:52:38Z",
+      "license": "n/a - not used",
+      "robots": "none_published (200 HTML page, no directives)",
+      "rows_in": 110341,
+      "rows_admitted": 0,
+      "status": "rejected",
+      "notes": "fetched live: only age/sex/episode/outcome, no vitals despite the name"
+    },
+    {
+      "source_id": "mimic_iv_ed",
+      "source_name": "MIMIC-IV-ED (PhysioNet)",
+      "source_url": "https://physionet.org/content/mimic-iv-ed/2.2/",
+      "retrieval_date": "2026-09-27T17:52:40Z",
+      "license": "unknown - not ingested",
+      "robots": "fetched, 0 disallow rules",
+      "http_status": "200",
+      "rows_in": 0,
+      "rows_admitted": 0,
+      "status": "failed",
+      "notes": "REAL ED triage vitals + acuity - but full extract is credentialed access"
+    },
+    {
+      "source_id": "mimic_iv_ed_demo",
+      "source_name": "MIMIC-IV-ED demo (PhysioNet, open)",
+      "source_url": "https://physionet.org/files/mimic-iv-ed-demo/2.2/edstays.csv",
+      "retrieval_date": "2026-09-27T17:52:41Z",
+      "license": "unknown - not ingested",
+      "robots": "fetched, 0 disallow rules",
+      "http_status": "404",
+      "rows_in": 0,
+      "rows_admitted": 0,
+      "status": "failed",
+      "notes": "open-access demo - file paths returned 404 in this environment"
+    },
+    {
+      "source_id": "nhamcs",
+      "source_name": "NHAMCS ED public-use files (CDC)",
+      "source_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NHAMCS/",
+      "retrieval_date": "2026-09-27T17:52:43Z",
+      "license": "unknown - not ingested",
+      "robots": "fetched, 1 disallow rules",
+      "http_status": "200",
+      "rows_in": 0,
+      "rows_admitted": 0,
+      "status": "failed",
+      "notes": "reachable, but fixed-width layout needs a multi-MB SAS spec per year"
+    },
+    {
+      "source_id": "kaggle",
+      "source_name": "Kaggle datasets",
+      "source_url": "https://www.kaggle.com/api/v1",
+      "retrieval_date": "2026-09-27T17:52:44Z",
+      "license": "unknown - not ingested",
+      "robots": "none_published (200 HTML page, no directives)",
+      "http_status": "200",
+      "rows_in": 0,
+      "rows_admitted": 0,
+      "status": "failed",
+      "notes": "kaggle.json holds a username-only key - API authentication unavailable"
+    }
+  ]
+}

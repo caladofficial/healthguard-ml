@@ -1,0 +1,85 @@
+{
+  "stage": "05_finetune",
+  "dataset": "train_raw_control",
+  "model": "lgbm",
+  "tag": "lgbm_control",
+  "n_train": 148033,
+  "n_val": 18495,
+  "n_test": 18549,
+  "n_features": 45,
+  "split": "cluster-disjoint (fixed in stage 4 before any tuning)",
+  "hyperparameters": {
+    "n_estimators": 400,
+    "num_leaves": 31,
+    "learning_rate": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "n_jobs": 2,
+    "random_state": 42,
+    "verbose": -1
+  },
+  "fit_seconds": {
+    "lgbm": 17.4
+  },
+  "cpu_seconds_total": 38.0,
+  "loss_curve_last": {
+    "lgbm": null
+  },
+  "loss_curve_first": {
+    "lgbm": null
+  },
+  "test_metrics": {
+    "macro_f1": 0.9206,
+    "weighted_f1": 0.9323,
+    "per_class_recall": {
+      "T0": 0.8888,
+      "T1": 0.9728,
+      "T2": 0.8909,
+      "T3": 0.9494,
+      "T4": 0.858
+    },
+    "T0_any_down": 0.1112,
+    "T0_deep_to_T2plus": 0.0063,
+    "beyond_adjacent": 0.015,
+    "over_triage": 0.0027,
+    "confusion": [
+      [
+        1967,
+        232,
+        12,
+        1,
+        1
+      ],
+      [
+        67,
+        6857,
+        121,
+        3,
+        1
+      ],
+      [
+        64,
+        187,
+        4036,
+        213,
+        30
+      ],
+      [
+        11,
+        2,
+        162,
+        3734,
+        24
+      ],
+      [
+        0,
+        0,
+        16,
+        101,
+        707
+      ]
+    ]
+  },
+  "external_real_rule_agreement": 0.1898,
+  "external_real_rows": 1317
+}

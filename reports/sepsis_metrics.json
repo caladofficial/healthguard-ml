@@ -1,0 +1,24 @@
+{
+  "roc_auc": 0.8698,
+  "pr_auc": 0.8494,
+  "brier": 0.1447,
+  "log_loss": 0.4523,
+  "model": "xgb_tuned",
+  "holdout": "6000 rows",
+  "n_classes": 2,
+  "candidate_scores": {
+    "xgb_tuned": 0.8698,
+    "moe_declustered": 0.8686
+  },
+  "xgb_search_params": {
+    "subsample": 0.9,
+    "reg_lambda": 3.0,
+    "n_estimators": 900,
+    "min_child_weight": 1,
+    "max_depth": 3,
+    "learning_rate": 0.04,
+    "colsample_bytree": 0.7
+  },
+  "baseline_prevalence": 0.4738,
+  "train_seconds": 103.6
+}

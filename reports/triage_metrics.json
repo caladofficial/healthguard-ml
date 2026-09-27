@@ -1,0 +1,116 @@
+{
+  "log_loss": 0.2298,
+  "macro_f1": 0.9388,
+  "weighted_f1": 0.946,
+  "confusion_matrix": [
+    [
+      2023,
+      218,
+      3,
+      0,
+      0
+    ],
+    [
+      71,
+      7129,
+      107,
+      1,
+      0
+    ],
+    [
+      78,
+      195,
+      4361,
+      129,
+      0
+    ],
+    [
+      3,
+      1,
+      112,
+      4395,
+      31
+    ],
+    [
+      0,
+      1,
+      2,
+      122,
+      1018
+    ]
+  ],
+  "per_class_recall": {
+    "T0": 0.9073,
+    "T1": 0.96,
+    "T2": 0.9108,
+    "T3": 0.9676,
+    "T4": 0.8906
+  },
+  "per_class_precision": {
+    "0": 0.9301,
+    "1": 0.945,
+    "2": 0.9511,
+    "3": 0.9458,
+    "4": 0.9704
+  },
+  "under_triage_T0_any_down": 0.0927,
+  "under_triage_T0_to_T1_adjacent": 0.0922,
+  "under_triage_T0_deep_to_T2plus": 0.0004,
+  "under_triage_T0_T1_rate_beyond_adjacent": 0.0113,
+  "over_triage_rate": 0.0012,
+  "human_review_flag_rate": 0.0054,
+  "blend_weights": {
+    "xgb": 0.333,
+    "lgbm": 0.0,
+    "group_vote": 0.5,
+    "moe": 0.167
+  },
+  "blend_val_score": 0.9183,
+  "xgb_params": {
+    "subsample": 0.9,
+    "reg_lambda": 1.5,
+    "n_estimators": 700,
+    "min_child_weight": 1,
+    "max_depth": 5,
+    "learning_rate": 0.02,
+    "colsample_bytree": 0.7
+  },
+  "cohort": "synthetic family-E 100000 (expert protocol labels, 5% inter-rater noise)",
+  "confusion": [
+    [
+      2036,
+      207,
+      1,
+      0,
+      0
+    ],
+    [
+      185,
+      7016,
+      106,
+      1,
+      0
+    ],
+    [
+      104,
+      192,
+      4338,
+      129,
+      0
+    ],
+    [
+      5,
+      1,
+      110,
+      4395,
+      31
+    ],
+    [
+      0,
+      1,
+      2,
+      122,
+      1018
+    ]
+  ]
+}

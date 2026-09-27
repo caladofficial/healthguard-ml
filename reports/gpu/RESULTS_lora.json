@@ -1,0 +1,58 @@
+{
+  "host": "Kaggle CPU (4 vCPU / 33.7 GB), no GPU, no internet",
+  "method": "LoRA implemented directly (peft unusable: torchao 0.10.0 < required 0.16.0, no internet to upgrade). fp32, not 4-bit QLoRA - NF4 needs CUDA.",
+  "base_model": "SmolLM2-135M-Instruct",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "lora_layers_injected": 120,
+  "trainable_params": 1843200,
+  "total_params": 136358208,
+  "trainable_pct": 1.352,
+  "train_rows": 3000,
+  "epochs": 2,
+  "batch_size": 8,
+  "lr": 0.0002,
+  "max_len": 48,
+  "train_seconds": 1618.4,
+  "train_steps": 750,
+  "loss_first": 8.4939,
+  "loss_last": 0.5295,
+  "loss_min": 0.381,
+  "eval_rows": 2000,
+  "eval_seconds_before": 195.9,
+  "eval_seconds_after": 198.5,
+  "before_finetune": {
+    "macro_f1": 0.1523,
+    "accuracy": 0.3605,
+    "T0_any_down": 1.0,
+    "T0_deep_to_T2plus": 0.1739,
+    "over_triage": 0.7425
+  },
+  "after_finetune": {
+    "macro_f1": 0.4014,
+    "accuracy": 0.484,
+    "T0_any_down": 0.4043,
+    "T0_deep_to_T2plus": 0.0826,
+    "over_triage": 0.2669
+  },
+  "delta": {
+    "macro_f1": 0.2491,
+    "accuracy": 0.1235,
+    "T0_any_down": -0.5957,
+    "T0_deep_to_T2plus": -0.0913,
+    "over_triage": -0.4756
+  },
+  "tree_ensemble_same_rows": {
+    "macro_f1": 0.9188,
+    "accuracy": 0.937,
+    "T0_any_down": 0.113,
+    "T0_deep_to_T2plus": 0.013,
+    "over_triage": 0.0
+  }
+}

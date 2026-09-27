@@ -1,0 +1,11 @@
+{
+  "method": "st",
+  "rows": 301317,
+  "dim": 32,
+  "seconds": 5836.4,
+  "rows_per_second": 51.6,
+  "array_mb": 38.6,
+  "model": "/kaggle/input/datasets/jirandom/all-minilm-l6-v2",
+  "raw_dim": 384,
+  "explained_variance": 0.8809056287401043
+}
